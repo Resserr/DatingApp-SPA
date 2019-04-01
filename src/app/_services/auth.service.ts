@@ -21,4 +21,7 @@ export class AuthService {
       })
     );
   }
+  register(user: any): Observable<Object> {
+    return this.httpClient.post(this.mainUrl + 'register', user);
+  }
 }
